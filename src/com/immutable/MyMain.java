@@ -2,7 +2,10 @@ package com.immutable;
 
 public class MyMain {
     public static void main(String[] args) {
-        Engine engine = new Engine(177, 1200, 180000);
+        Engine engine = new Engine();
+        engine.setWeight(1200);
+        engine.setMileage(180000);
+        engine.setHorsePower(177);
         Car car = new Car(2001, "W 203", "merrcedes", engine);
         engine.setHorsePower(200);
         System.out.println(engine.getHorsePower());

@@ -5,10 +5,8 @@ public class Engine {
     private int weight;
     private int mileage;
 
-    public Engine(int horsePower, int weight, int mileage) {
-        this.horsePower = horsePower;
-        this.weight = weight;
-        this.mileage = mileage;
+
+    public Engine() {
     }
 
     @Override
@@ -43,7 +41,14 @@ public class Engine {
     public void setMileage(int mileage) {
         this.mileage = mileage;
     }
-    public Engine copy(){
-        return new Engine(this.horsePower,this.getWeight(),this.getMileage());
+
+    public Engine copy() {
+        Engine engine = new Engine();
+
+        engine.setHorsePower(this.getHorsePower());
+        engine.setMileage(this.getMileage());
+        engine.setWeight(this.getWeight());
+
+        return engine;
     }
 }
