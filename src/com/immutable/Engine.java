@@ -43,4 +43,7 @@ public class Engine {
     public void setMileage(int mileage) {
         this.mileage = mileage;
     }
+    public Engine copy(){
+        return new Engine(this.horsePower,this.getWeight(),this.getMileage());
+    }
 }

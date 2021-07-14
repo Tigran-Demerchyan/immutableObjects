@@ -10,7 +10,7 @@ public final class Car {
         this.productionYear = productionYear;
         this.model = model;
         this.mark = mark;
-        this.engine = new Engine(newEng.getHorsePower(), newEng.getWeight(), newEng.getMileage());
+        this.engine = newEng.copy();//new Engine(newEng.getHorsePower(), newEng.getWeight(), newEng.getMileage());
     }
 
     @Override
@@ -36,6 +36,6 @@ public final class Car {
     }
 
     public Engine getEngine() {
-        return new Engine(this.engine.getHorsePower(), this.engine.getWeight(), this.engine.getMileage());
+        return engine.copy();//new Engine(this.engine.getHorsePower(), this.engine.getWeight(), this.engine.getMileage());
     }
 }
